@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <title>www.slbotbee.com</title>
+    <style>
+        body { 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            height: 100vh; background-color: #ffeef8; font-family: 'Arial', sans-serif; 
+        }
+        h1 { color: #d63384; font-size: 3rem; text-align: center; }
+        .buttons { margin-top: 20px; }
+        button { 
+            padding: 15px 30px; font-size: 1.2rem; cursor: pointer; 
+            border-radius: 10px; border: none; margin: 0 10px; transition: 0.3s;
+        }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #555; color: white; }
+        #yesBtn:hover { transform: scale(1.1); }
+    </style>
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+    <h1>Do you love me? ❤️</h1>
+    
+    <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        // When Yes is clicked
+        yesBtn.onclick = () => {
+            alert("i love you too");
+            document.body.innerHTML = "<h1>i love you too bbe</h1>";
+        };
+
+        // Redirects to the RANNGO parody video: https://www.youtube.com/watch?v=7-zUivzSFSU
+        noBtn.onclick = () => {
+            window.location.href = "https://www.youtube.com/watch?v=7-zUivzSFSU";
+        };
+    </script>
 </body>
 </html>
